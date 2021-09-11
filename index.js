@@ -4,7 +4,6 @@ const { SlashCreator, GatewayServer } = require("slash-create");
 const { Client } = require("discord.js");
 const { Player } = require("discord-player");
 const { registerPlayerEvents } = require("./events");
-const { generateDocs } = require("./docs");
 
 const client = new Client({
   intents: ["GUILD_VOICE_STATES", "GUILD_MESSAGES", "GUILDS"],
