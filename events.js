@@ -15,16 +15,16 @@ module.exports.registerPlayerEvents = (player) => {
         queue.metadata.send(`**${track.title}** fue agregada a la cola!`);
     });
 
-    player.on("botDisconnect", (queue) => {
+/*     player.on("botDisconnect", (queue) => {
         queue.metadata.send("Desconectado manualmente del canal. Borrando canciones restantes.");
     });
-
+ */
     player.on("channelEmpty", (queue) => {
         queue.metadata.send("Canal abandonado por inactividad.");
     });
 
-    player.on("queueEnd", (queue) => {
+    /* player.on("queueEnd", (queue) => {
         queue.metadata.send("Se acabaron las canciones!");
-    });
+    }); */
 
 };
