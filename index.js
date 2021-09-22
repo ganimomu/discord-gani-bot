@@ -2,7 +2,7 @@ require("dotenv").config();
 const path = require("path");
 const { SlashCreator, GatewayServer } = require("slash-create");
 const { Client } = require("discord.js");
-const { Player } = require("discord-player");
+const { Player, StreamDispatcher } = require("discord-player");
 const { registerPlayerEvents } = require("./events");
 
 const client = new Client({
@@ -11,7 +11,7 @@ const client = new Client({
     status: "dnd",
     activities: [
       {
-        name: "@ Ganimomu :)",
+        name: "algún día volveré :3",
         type: "STREAMING",
         url: "https://twitch.tv/ganimomu",
       },
@@ -37,8 +37,7 @@ creator
   )
   .registerCommandsIn(path.join(__dirname, "commands"));
 
-if (process.env.GUILD_ID)
-  creator.syncCommandsIn(process.env.GUILD_ID);
+if (process.env.GUILD_ID) creator.syncCommandsIn(process.env.GUILD_ID);
 else creator.syncCommands();
 
 client.login(process.env.BOT_TOKEN);

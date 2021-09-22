@@ -61,9 +61,7 @@ module.exports = class extends SlashCommand {
     }
 
     await ctx.sendFollowUp({
-      content: `Cargando tu ${
-        searchResult.playlist ? "lista de reproducción" : "canción"
-      }...`,
+      content: `Cargando ${ searchResult.playlist ? "lista de reproducción" : "canción: **" + searchResult.tracks[0] + "**" }...`,
     });
     searchResult.playlist
       ? queue.addTracks(searchResult.tracks)
