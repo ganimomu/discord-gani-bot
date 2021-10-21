@@ -1,6 +1,6 @@
 {
   "name": "GaniBOT_Discord",
-  "version": "1.22.11",
+  "version": "1.0.0",
   "engines": {
     "node": "16.x",
     "npm": ">=7.21.x"
