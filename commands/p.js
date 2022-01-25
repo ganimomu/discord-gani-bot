@@ -6,8 +6,8 @@ const fs = require("fs");
 module.exports = class extends SlashCommand {
   constructor(creator) {
     super(creator, {
-      name: "play",
-      description: "Reproduce la canción especificada.",
+      name: "p",
+      description: "ALIAS DE /play: Reproduce la canción especificada.",
       options: [
         {
           name: "query",
